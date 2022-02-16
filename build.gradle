@@ -1,0 +1,15 @@
+plugins {
+    id 'java-library'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    implementation 'androidx.annotation:annotation:1.2.0'
+    implementation 'org.json:json:20200518'
+    testImplementation 'junit:junit:4.+'
+    testImplementation 'commons-codec:commons-codec:1.15' // base16 isn't builtin; we use it for diagnostics during unit tests
+}
