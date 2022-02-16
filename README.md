@@ -27,7 +27,7 @@ val allowedIssuerNames = if(BuildConfig.DEBUG)
 val verifier = PassVerifier(allowedIssuerNames)
 try {
 
-    val passContents = verifier.verify(barcode)
+    val passContents = verifier.verify(passPayload)
     val givenName = passContents.payload.credential?.credentialSubject?.givenName ?: ""
     val familyNameCandidate = passContents.payload.credential?.credentialSubject?.familyName
     val dateOfBirth = passContents.payload.credential?.credentialSubject?.dateOfBirth ?: ""
